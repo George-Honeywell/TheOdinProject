@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Foundation Notes</title>
+</head>
+<body>
+    <h1>Links and Images</h1>
+    <h2>Anchor Elements</h2>
+    <p>To create links to other websites or pages within the same site, the anchor tag is useful for this. The anchor tag looks something like this:</p>
+    <img src="../images/anchor_tag.png" alt="A screenshot showing the anchor HTML tag." width="553" height="44">
+    <p>Below is a breakdown of that the anchor tag contains:</p>
+    <ul>
+        <li>a - The abbrevation of the 'Anchor Tag'</li>
+        <li>href - Stands for 'HyperText Reference', the website/webpage the user is taken to when clicked</li>
+        <li>target - Specifies where the linked source will be opened.</li>
+        <ul>
+            <li>_self - Opens in the same tab (default option if one isn't provided)</li>
+            <li>_blank - Opens in a new tab</li>
+        </ul>
+        <li>rel - Used to describe the relationship between the current and link page/document</li>
+        <ul>
+            <li>noopener - Prevents the new tab from accessing the original page. Modern browsers set this automatically.</li>
+            <li>noreferrer - Same as `noopener`, but also prevents certain details about the original page from being passed to the new page.</li>
+        </ul>
+    </ul>
+
+    <h2>Absolute and Relative Links</h2>
+    <h3>Absolute Links</h3>
+    <p>Links to pages on other websites are called 'absolute' links. A typical absolute link will be made up of the following: `scheme://domain/path`. More information can be found <a href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL" target="_blank">here</a>.</p>
+    <h3>Relative Links</h3>
+    <p>Relative links link to other pages within a websites own domain. Relative links do not include the domain name, since it's another page on the same site. Relative links can only include the file path to the other page, relative to the page you are creating the link on.</p>
+    <p>If the page is located in the same directory, the anchor tag will most likely look something like this:</p>
+    <img src="./img/relative_path_same_directory.png" alt="Showing the anchor element linking to an image within the same directory." width="831" height="39">
+    <p>The image shown below is in a folder, but is in the same directory as this .html file.</p>    
+    <img src="./img/file_directory.png" alt="Shows a screenshot of the current project structure.">
+
+    <p>However, if the image is located in a different directory altogether, the anchor tag might look something like: </p>  
+    <img src="../images/image_in_another_directory.png" alt="A relative path showing a link to a html file that isn't in the same directory." width="1382" height="39">
+    <p>In short, the src in the above image breaks down to this:</p>
+    <ol>
+        <li>`../` - Go to the above directory (in this case, go from 'html-foundations' to 'The Odin Project')</li>
+        <li>`images/` - Go into the images folder</li>
+        <li>`image_in_another_directory.png` - Load the image_in_another_directory.png image</li>
+    </ol>
+    
+    <h2>The 'alt' attribute</h2>
+    <p>The anchor tag also has a 'alt' attribute too. This attribute, when used, is a short piece of text describing the image. This is useful for accessibility tools, such as screenreaders. In the instance where the image cannot be loaded, the text is displayed instead.</p>
+    <p>Below shows an example of this in action. The file name has been purposely spelt incorrectly to show the alt text instead of the image.</p>
+    
+    <img src="./img/filedirectory.png" alt="Shows a screenshot of the current project structure."><br />
+    <img src="../images/incorrect_src.png" alt="Shows a screenshot of the alt text being used instead of the image.">
+
+    <h2>Image size Attributes</h2>
+    <p>Whilst this isn't required, specifying a width and height of the image helps the browser layout the page without causing images to flash and jump about.</p>
+    <p>It is a good habit to always specify these attributes on every image, even when the image is correct size or you are using CSS to modify it. This can be done by using the `width` and `height` attributes as shown in the example below:</p>
+    <img src="../images/image_in_another_directory.png" alt="A relative path showing a link to a html file that isn't in the same directory." width="1382" height="39">
+    <p>It's important to get the image size correct. If the wrong width or height is provided, the image will appear incorrectly. Either looking to stretched or to small.</p>
+
+
+    
+
+</body>
+</html>
