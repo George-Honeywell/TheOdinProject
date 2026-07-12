@@ -6,6 +6,39 @@
     <title>CSS Foundations</title>
 </head>
 <body>
+    <h1>Intro to CSS</h1>
+    <p>CSS is used to style a website! HTML will only build the basic foundations of a website, whilst CSS (stands for Cascading Style Sheets) will allow the developer to add style.</p>
+    <h2>Basic Syntax</h2>
+    <p>CSS is made up of various rules. Each rule has it's own selector (explained later) and a semicolon-separated list of declarations, with each of those declarations being made up of a property-value pair, which can be seen in the image below.</p>
+    <img src="./images/css_basic_syntax.png" width="256" alt="A screenshot showing basic CSS syntax." /> 
+    <h2>Selectors</h2>
+    <p>Selectors refer to the HTML elements to which CSS styles rules apply. It is what is being selected for each rule. The most common ones are shown below.</p>
+    <h3>Universal Selector</h3>
+    <p>The universal selector will select elements of <strong>every type</strong>. The syntax for the universal selector is the asterisk. The example below would turn every element to have purple text.</p>
+    <img src="./images/css_universal_selector.png" width="256" />
+    <h3>Type Selectors</h3>
+    <p>A tyle selector (or element selector) will select all elements of the given type. The image below uses the <strong>div</strong> selector which will only apply the style to any div elements. The paragraph element here will be ignored.</p>
+    <img src="./images/css_type_selector.png" alt="A screenshot showing the type selector." />
+    <h3>Class Selectors</h3>
+    <p>Class selectors will select all elements with the given class attribute. The example below shows how to achieve this.
+    </p>
+    <img src="./images/css_class_selector.png" alt="A screenshot showing a div tag with the alert text class name, and the CSS class selector.">
+    <p><strong>NOTE:</strong> The syntax for class selectors has a period at the very beginning, followed by the selector name. Classes aren't required to be specific to any element, so they can be used on multiple elements in which the same behaviour will apply.</p>
+    <p>Class selectors won't work if the class name begins with a number. If a selector is something like <strong>4alert-text</strong>, it won't work. Always keep selector names to characters only. It is common practise to use a hyphen when separating out words, instead of a space or underscore.</p>
+    <p>Applying multiple classes to an element can be done by simply putting a space between the class names. As an example, using <strong>alert-text <em>space</em> severe-alert</strong>.</p>
+    <h3>ID Selectors</h3>
+    <p>ID selectors are very similar to class selectors. They can be used by using the <strong>id</strong> attribute within an element. However, IDs can only have one ID, unlike classes.</p>
+    <p>Instead of using a period at the start, a hastag is used instead. The image below shows an example.
+    </p>
+    <img src="./images/css_id_selector.png" alt="A screenshot showing the use of the ID attribute and CSS selector." />
+    <p><strong>NOTE:</strong> Like classes, IDs cannot start with a number either.</p>
     
+    <h3>Grouping Selectors</h3>
+    <p>Selectors can be grouped together by using a comma separated list like the example below.</p>
+    <img src="./images/css_grouped_selectors.png" alt="A screenshot showing CSS selectors grouped together by a comma separated list." />
+    <p>This avoid repition if two css rules share the same styles. The above will apply to any element that has the read and unread class.</p>
+    
+
+
 </body>
 </html>
