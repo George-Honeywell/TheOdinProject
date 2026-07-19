@@ -71,5 +71,17 @@
     <p>Both of these properties can accept one of several kinds of values. a common one is a keyword, such as an actual colour name like <em>red</em> or <em>transparent</em>. They also accept HEX, RGB, and HSL values. Below is an example:</p>
     <img src="./images/css_color_property.png" alt="Use of the CSS colour property, using HEX, RGB, and HSL to set the colour." />
 
+    <h3>Typography basics and text-align</h3>
+    <p><em>font-family</em> can be a single value or a comma-separated list of values that determine what font an element uses. Each font will fall into once of two categories:
+    <ol>
+        <li>"Font Family Name" like "New Times Roman" (quotes are used due to the whitespace between words)</li>
+        <li>"Generic Family name" like <em>serif</em> (generic family names never use quotes).</li>
+    </ol></p>
+    <p>If the browser cannot find or does not support the first font in a list, it will use the next one, then the next one, and so on until it finds a supported and valid font. This is why it is best practice to include a list of values for this property, starting with the font you want to be used and ending with a generic font family as a fallback. Example: <em>font-family: "Times New Roman", serif;</em></p>
+
+    <p><em>font-size</em> will as the name suggests, set the size of the font. When giving a value to this property, the value should not contain any whitespace. Example; <em>font-size: 22px;</em>. Note there isn't a space between "22" and "px".</p>
+    <p><em>font-weight</em> affects the boldness of text, assuming the font supports the specified weight. This value can be a keyword (example: <em>font-weight: bold;</em>) or a number between 1 and 1,000. The numeric values will be in increments of 100 up to 900, though will depend on the used font.</p>
+    <p><em>text-align</em> will align text horizontally within an element, and you can use the common keywords you may have come across in word processors as the value for his property, example: <em>text-align: center</em>.</p>
+
 </body>
 </html>
