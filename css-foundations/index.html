@@ -83,5 +83,12 @@
     <p><em>font-weight</em> affects the boldness of text, assuming the font supports the specified weight. This value can be a keyword (example: <em>font-weight: bold;</em>) or a number between 1 and 1,000. The numeric values will be in increments of 100 up to 900, though will depend on the used font.</p>
     <p><em>text-align</em> will align text horizontally within an element, and you can use the common keywords you may have come across in word processors as the value for his property, example: <em>text-align: center</em>.</p>
 
+    <h3>Image width and height</h3>
+    <p>Images aren't the only elements that we can adjust the width and height on, but we want to focus on them specifically in this case.</p>
+    <p>By default, an <em>img</em> elements width and height values will be the same as the actual images file's width and height. If you wanted to adjust the size of the image without causing it to lose it's proportions, you would set either width or height property to a specific value and the other property to <em>auto</em>. For example: </p>
+    <img src="./images/css_image_property.png" alt="A CSS ruleset adjusting the width and height of any image elements." />
+    <p>For example, if an images original size was 500px in height and 1000px in width, using the above CSS would result in a height of 250px.</p>
+    <p>These properties work in conjunction with the width and height attributes in the HTML. It is best to include both of these properties and the HTML attribtues for image elements, even if you don't plan on adjusting the values from the image file's original ones. When these values aren't included, if an image takes longer to load than the rest of the page contents, it won't take up any space on the page at first but will suddenly cause a drastic shift of the other pages content once it does load in. Explicitly stating a width and height prevents this from happening as space will be reserved on the page and appear blank until the image loads.</p>
+
 </body>
 </html>
