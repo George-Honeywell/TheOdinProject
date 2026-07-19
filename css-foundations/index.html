@@ -52,6 +52,15 @@
     <p>You can't chain more than one type selector since an element can't be two different types at once.</p>
     <p>For example; chaining two type selectors like <em>div</em> and <em>p</em> would give the selector <em>divp</em>, which isn't a valid HTML element.</p>
 
+    <h3>Descendant Combinator</h3>
+    <p>Combinators allow developers to combine multiple selectors differently than either grouping or chaining them, as they show a relationship between selectors. There are four types, but this only shows the <strong>descendant combinator</strong>, which is represented in CSS by a single space between selectors. A descendant combinator will only cuase elements that match the last selector to be selected if they also have an ancestor (parent, grandparentm etc.) that matches the previous selector.</p>
+    <p>Something like <em>.ancestor .child</em> would select an element with the class <em>.child</em> if it has an ancestor with the class <em>ancestor</em>. Another way to think of it is that <em>child</em> will only be selected if it is nested inside <em>ancestor</em>, regardless of how deep that nesting is.</p>
+    <p>The example code below shows an example of this in action: </p>
+    <img src="./images/css_descendant_combinator_html.png" alt="HTML showing div elements with parent/child relationship, with a single div element on it's own." />
+    <br />
+    <img src="./images/css_descendant_combinator_css.png" alt="CSS rule showing the descendant combinator." />
+    <p>With the above HTML and CSS, the CSS rule would only be applied to the 3 div elements at the top. The single div with just the contents class would be ignored.</p>
+    <p>There is no limit on how many combinators that can be added, so adding <em>.one .two .three .four</em> would be valid. This would just select an element that has a class of <em>four</em> if it has an ancestor with a class of <em>three</em>, and if that has its own ancestor with a class of <em>two.</em> etc. This should typically be avoided as it can get confusing and long, and it can cause issues with specificity.</p>
 
 </body>
 </html>
