@@ -62,5 +62,14 @@
     <p>With the above HTML and CSS, the CSS rule would only be applied to the 3 div elements at the top. The single div with just the contents class would be ignored.</p>
     <p>There is no limit on how many combinators that can be added, so adding <em>.one .two .three .four</em> would be valid. This would just select an element that has a class of <em>four</em> if it has an ancestor with a class of <em>three</em>, and if that has its own ancestor with a class of <em>two.</em> etc. This should typically be avoided as it can get confusing and long, and it can cause issues with specificity.</p>
 
+    <h2>Properties To Get Started With</h2>
+    <p>This section will cover the most common properties which is enough to get started using CSS. All properties have a default value, which will be used if neither the developer or browser has set an initial value. The <a href="https://developer.mozilla.org/en-US/docs/Web/CSS">MDN Docs</a> will show the default value for each property.</p>
+
+    <h3>Color and background-color</h3>
+    <em><strong>NOTE: </strong>when naming CSS properties, the american version of the spelling is used. So 'color' would be used instead of 'colour', which is the british spelling.</em>
+    <p>The <em>color</em> property sets an element's text colour. The <em>background-color</em> property sets the background colour of an element.</p>
+    <p>Both of these properties can accept one of several kinds of values. a common one is a keyword, such as an actual colour name like <em>red</em> or <em>transparent</em>. They also accept HEX, RGB, and HSL values. Below is an example:</p>
+    <img src="./images/css_color_property.png" alt="Use of the CSS colour property, using HEX, RGB, and HSL to set the colour." />
+
 </body>
 </html>
