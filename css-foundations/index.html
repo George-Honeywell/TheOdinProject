@@ -38,6 +38,19 @@
     <img src="./images/css_grouped_selectors.png" alt="A screenshot showing CSS selectors grouped together by a comma separated list." />
     <p>This avoid repition if two css rules share the same styles. The above will apply to any element that has the read and unread class.</p>
     
+    <h3>Chaining Selectors</h3>
+    <p>Another way to use selectors is to chain them as a list without any separation.</p>
+    <p>Say we had the following HTML below:</p>
+    <img src="./images/css_chaining_selectors.png" alt="HTML elements using 2 selectors." />
+    <p>Two elements have the <em>subsection</em> class that have some sort of unique styles, but what if we only want to apply a separate rule to the element that also has header as a second class? They can be chained together like so in CSS:</p>
+    <img src="./images/css_chaining_selectors_002.png" alt="CSS ruleset chaining 2 selectors together." />
+    <p>The <em>.subsection.header</em> does, it selects any element that has <strong>both</strong> the subsection and header classes. This syntax works for chaining any combination of selectors, <em>except</em> for chaining more than one type selector.</p>
+    <p>The same method can be applied to chain a class and and id element together:</p>
+    <img src="./images/css_chaining_selectors_003.png" alt="Showing HTML elements with a class and an ID element." />
+    <p>Both elements from above can be combined with the following CSS: </p>
+    <img src="./images/css_chaining_selectors_004.png" alt="CSS showing with 2 classes and a single class and ID ruleset." />
+    <p>You can't chain more than one type selector since an element can't be two different types at once.</p>
+    <p>For example; chaining two type selectors like <em>div</em> and <em>p</em> would give the selector <em>divp</em>, which isn't a valid HTML element.</p>
 
 
 </body>
