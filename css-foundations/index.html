@@ -90,5 +90,20 @@
     <p>For example, if an images original size was 500px in height and 1000px in width, using the above CSS would result in a height of 250px.</p>
     <p>These properties work in conjunction with the width and height attributes in the HTML. It is best to include both of these properties and the HTML attribtues for image elements, even if you don't plan on adjusting the values from the image file's original ones. When these values aren't included, if an image takes longer to load than the rest of the page contents, it won't take up any space on the page at first but will suddenly cause a drastic shift of the other pages content once it does load in. Explicitly stating a width and height prevents this from happening as space will be reserved on the page and appear blank until the image loads.</p>
 
+    <h2>Adding CSS to HTML</h2>
+    <h3>External CSS</h3>
+    <p>External CSS is the most common method when using CSS on a webpage. This involves a separate .css file which is linked within the <em>head</em> tag and a void <em>link</em> element:</p>
+    <img src="./images/css_linking_external_style_sheet_html.png" alt="Screenshot showing how to link an external style sheet to a HTML file." />
+    <img src="./images/css_external_style_sheet.png" alt="A screenshot of 2 basic CSS sules for div and p tags." />
+    <p>With the two screenshots above, the webpage that is now linked to the CSS file, will have it's div and p elements styled to what is in the external style sheet. In the HTML, the <em>link</em> element has two attributes, <em>link</em> and <em>href</em>. The link attribute is required as it specifies the relationship between the HTML file and the linked file. <em>href</em> (like the anchor tag) is the path to the file. Whether it's relative or absolute.</p>
+
+    <h3>Internal CSS</h3>
+    <p>CSS can be embedded into a web page directly, without the need for a external style sheet. For this approach, all rules are declared within the <em>style</em> element, which must be in the <em>head</em> element.</p>
+    <img src="./images/css_internal_styles.png" alt="An example showing how CSS can be used directly within a HTML file." />
+    <p>With the above, any <em>div</em> or <em>p</em> elements will have the style applied. This would only work within this HTML file. The rules would need to be created for every HTML file, if a external sheet isn't used.</p>
+
+    <h3>Inline CSS</h3>
+    <p>CSS can be applied directly to HTML elements, although, this isn't recommended as it can cause bloat to the HTML file. It also becomes more tedious when changing rule styles, meaning each element would need to be changed manually. This will only apply to that element too, not any other div elements.</p>
+    <img src="./images/css_inline_style.png" alt="Using CSS directly within an HTML element." />
 </body>
 </html>
