@@ -6,6 +6,34 @@
     <title>CSS Foundation - The Cascade</title>
 </head>
 <body>
-    
+    <h1>The Cascade of CSS</h1>
+
+    <h2>Specificity</h2>
+    <p>A CSS declaration that is more specific will take precedence over less specific ones. Inline styles have the highest specificity compared to selectors, while each type of selector has its own specificity, but this focuses on the ones that have been covered so far:</p>
+    <ol>
+        <li>ID Selectors (#) (most specific selector)</li>
+        <li>Class Selectors (.)</li>
+        <li>Type selectors (div, p, h1, etc)</li>
+    </ol>
+    <p>Specificity is only taken into account when an alement has multiple, conflicting declarations targeting it. An ID selector will always beat any number of class selectors, a class selector will always beat any number of type selectors, and a style selector will always beat any number of less specific selectors. When there is no declaration with a selector of higher specificity, a rule with a greater number of selectors of the same type will take precedence over another rule with fewer selectors.</p>
+    <p>The example below shows how specificity works.</p>
+    <img src="./images/css-specificity.png" alt="Two HTML div elements with classes applied." />
+    <br />
+    <img src="images/css-specificity-rules.png" alt="Two css rules applying different styles." />
+    <p>In the example above, both rules are using only class selectors, but rule 2 is more specific because it is using more class selectors, so the colour red declaration would take precedence.</p>
+    <p>Let's change it up a bit</p>
+    <img src="./images/css-specificity-withid.png" alt="Two HTML div elements with classes and an ID." />
+    <br />
+    <img src="images/css-specificity-rules-withid.png" alt="Two css rules applying different styles." />
+    <p>In the example above, despite rule 2 having more class selectors then ID selectors, rule 1 is more specific because ID beats class. In this case, the colour blue declaration would take precedence.</p>
+
+    <p>A little more complex...</p>
+    <img src="./images/css-specificity-withid.png" alt="Two HTML div elements with classes and an ID." />
+    <br />
+    <img src="images/css-specificity-yellowbackground.png" alt="Two css rules applying different styles." />
+    <p>In the final example above, the first rule uses an ID selector, while the second rule combines an ID and class selector. Therefore, neither rule is using a more specific selector than the other. The cascade then checks the number of each selector type. Both rules have only one ID selector, but rule 2 has an ID and class selector. so rule 2 has higher specificity.</p>
+    <p>While the colour red declaration would take precedence, the background colour yellow declaration would still be applied since there's no conflicting declaration for it. The example below shows this in action:</p>
+    <img src="./images/css-specificity-example.png" alt="Red text on a yellow background."/>
+    <p>As there's no clash between the background colour, the highest specificity is applied. As there's a clash between colours (red and blue), the rule with the highest specificity applies it's colour instead.</p>
 </body>
 </html>
